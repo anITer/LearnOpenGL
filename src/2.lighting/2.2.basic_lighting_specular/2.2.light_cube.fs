@@ -1,7 +1,10 @@
 #version 330 core
+in vec2 uvCoord;
 out vec4 FragColor;
+
+uniform sampler2D colorMap;
 
 void main()
 {
-    FragColor = vec4(1.0); // set alle 4 vector values to 1.0
+    FragColor = texture(colorMap, uvCoord);
 }
